@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<div class="container">
+    <div class="section">
+        <h1 class="title">Drawing Software</h1>
+        <h2 class="subtitle">Drawing Software</h2>
+
+        <div class="is-flex is-justify-content-center is-8">
+            <a class="button is-primary" target="_blank" href="https://github.com/Xwilarg/Magia/releases" disabled>Download<br>(Not yet available)</a>
+            <a class="button" target="_blank" href="https://github.com/Xwilarg/Magia">GitHub</a>
+        </div>
+    </div>
+    <div class="section">
+        <h2 class="subtitle">Art made with Magia</h2>
+        <div class="grid">
+        {% for elem in data %}
+        <div class="card cell">
+            <div class="card-image">
+                <img src="data/{{ elem.image }}"/>
+            </div>
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-content">
+                        <p>By {{ elem.author }}</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <small>Version: {{ elem.version }}</small>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

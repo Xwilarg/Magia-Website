@@ -1,0 +1,11 @@
+.card:last-child {
+    margin-bottom: 1.5rem;
+}
+
+.is-flex {
+    column-gap: 20px;
+}
+
+.button {
+    width: 150px;
+}
